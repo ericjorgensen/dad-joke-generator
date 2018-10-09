@@ -10,12 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var JokeContents: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let textFileLoader = TextFileLoader()
         
+        JokeContents.text = textFileLoader.readJokesFile()
         
     }
 

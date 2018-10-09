@@ -16,7 +16,7 @@
 		07DFE54B216C38C5002D62BC /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE54A216C38C5002D62BC /* Word.swift */; };
 		07DFE54D216C38F9002D62BC /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE54C216C38F9002D62BC /* Chain.swift */; };
 		07DFE54F216C39ED002D62BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE54E216C39ED002D62BC /* Extensions.swift */; };
-		07DFE551216C3AAC002D62BC /* TextFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE550216C3AAC002D62BC /* TextFileLoader.swift */; };
+		07DFE551216C3AAC002D62BC /* JokeLibraryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE550216C3AAC002D62BC /* JokeLibraryLoader.swift */; };
 		07DFE553216C3EB8002D62BC /* jokes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DFE552216C3EB8002D62BC /* jokes.txt */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		07DFE54A216C38C5002D62BC /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		07DFE54C216C38F9002D62BC /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		07DFE54E216C39ED002D62BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		07DFE550216C3AAC002D62BC /* TextFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileLoader.swift; sourceTree = "<group>"; };
+		07DFE550216C3AAC002D62BC /* JokeLibraryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeLibraryLoader.swift; sourceTree = "<group>"; };
 		07DFE552216C3EB8002D62BC /* jokes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = jokes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +94,7 @@
 				07DFE533216C36E9002D62BC /* LaunchScreen.storyboard */,
 				07DFE536216C36E9002D62BC /* Info.plist */,
 				07DFE54A216C38C5002D62BC /* Word.swift */,
-				07DFE550216C3AAC002D62BC /* TextFileLoader.swift */,
+				07DFE550216C3AAC002D62BC /* JokeLibraryLoader.swift */,
 				07DFE552216C3EB8002D62BC /* jokes.txt */,
 				07DFE54C216C38F9002D62BC /* Chain.swift */,
 				07DFE54E216C39ED002D62BC /* Extensions.swift */,
@@ -215,7 +215,7 @@
 			files = (
 				07DFE54F216C39ED002D62BC /* Extensions.swift in Sources */,
 				07DFE52D216C36E8002D62BC /* ViewController.swift in Sources */,
-				07DFE551216C3AAC002D62BC /* TextFileLoader.swift in Sources */,
+				07DFE551216C3AAC002D62BC /* JokeLibraryLoader.swift in Sources */,
 				07DFE54D216C38F9002D62BC /* Chain.swift in Sources */,
 				07DFE52B216C36E8002D62BC /* AppDelegate.swift in Sources */,
 				07DFE54B216C38C5002D62BC /* Word.swift in Sources */,
