@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D25F4E216D87E7009A213C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 07D25F4D216D87E7009A213C /* .gitignore */; };
 		07DFE52B216C36E8002D62BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE52A216C36E8002D62BC /* AppDelegate.swift */; };
 		07DFE52D216C36E8002D62BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE52C216C36E8002D62BC /* ViewController.swift */; };
 		07DFE530216C36E8002D62BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DFE52E216C36E8002D62BC /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07D25F4D216D87E7009A213C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		07DFE527216C36E8002D62BC /* Dad Joke Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dad Joke Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DFE52A216C36E8002D62BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07DFE52C216C36E8002D62BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				07DFE554216D2E45002D62BC /* LICENSE */,
+				07D25F4D216D87E7009A213C /* .gitignore */,
 				07DFE529216C36E8002D62BC /* Dad Joke Generator */,
 				07DFE53E216C36EA002D62BC /* Dad Joke GeneratorTests */,
 				07DFE528216C36E8002D62BC /* Products */,
@@ -199,6 +202,7 @@
 				07DFE532216C36E9002D62BC /* Assets.xcassets in Resources */,
 				07DFE530216C36E8002D62BC /* Main.storyboard in Resources */,
 				07DFE553216C3EB8002D62BC /* jokes.txt in Resources */,
+				07D25F4E216D87E7009A213C /* .gitignore in Resources */,
 				07DFE555216D2E45002D62BC /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
