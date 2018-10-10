@@ -9,16 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var JokeContents: UITextView!
+    
+    @IBOutlet weak var CorpusDisplay: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let textFileLoader = TextFileLoader()
+        let corpusLibraryManager = CorpusLibraryManager()
         
-        JokeContents.text = textFileLoader.readJokesFile()
+        CorpusDisplay.text = corpusLibraryManager.readCorpusFile()
         
     }
 

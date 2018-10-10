@@ -30,7 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="JokeContents" destination="v4d-oT-i0N" id="vex-1h-cMj"/>
+                        <outlet property="CorpusDisplay" destination="v4d-oT-i0N" id="8B0-w9-VZq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
