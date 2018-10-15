@@ -18,8 +18,11 @@
 		07DFE54D216C38F9002D62BC /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE54C216C38F9002D62BC /* Chain.swift */; };
 		07DFE54F216C39ED002D62BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE54E216C39ED002D62BC /* Extensions.swift */; };
 		07DFE551216C3AAC002D62BC /* CorpusLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DFE550216C3AAC002D62BC /* CorpusLibraryManager.swift */; };
-		07DFE553216C3EB8002D62BC /* jokes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07DFE552216C3EB8002D62BC /* jokes.txt */; };
 		07DFE555216D2E45002D62BC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 07DFE554216D2E45002D62BC /* LICENSE */; };
+		07F674F82171AA1700F36C97 /* StringSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F674F72171AA1700F36C97 /* StringSplitter.swift */; };
+		07F674FA2172701600F36C97 /* JokesLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F674F92172701600F36C97 /* JokesLibraryManager.swift */; };
+		07F674FC2173A01B00F36C97 /* CachedJokesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F674FB2173A01B00F36C97 /* CachedJokesTableViewController.swift */; };
+		07F674FE2173A7B300F36C97 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F674FD2173A7B300F36C97 /* JokeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +51,11 @@
 		07DFE54C216C38F9002D62BC /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		07DFE54E216C39ED002D62BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		07DFE550216C3AAC002D62BC /* CorpusLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorpusLibraryManager.swift; sourceTree = "<group>"; };
-		07DFE552216C3EB8002D62BC /* jokes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = jokes.txt; sourceTree = "<group>"; };
 		07DFE554216D2E45002D62BC /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		07F674F72171AA1700F36C97 /* StringSplitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSplitter.swift; sourceTree = "<group>"; };
+		07F674F92172701600F36C97 /* JokesLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesLibraryManager.swift; sourceTree = "<group>"; };
+		07F674FB2173A01B00F36C97 /* CachedJokesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedJokesTableViewController.swift; sourceTree = "<group>"; };
+		07F674FD2173A7B300F36C97 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,15 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				07DFE52A216C36E8002D62BC /* AppDelegate.swift */,
-				07DFE52C216C36E8002D62BC /* ViewController.swift */,
-				07DFE52E216C36E8002D62BC /* Main.storyboard */,
+				07F675012173B20000F36C97 /* File Managers */,
+				07F674FF2173A95C00F36C97 /* Markov Chain Generator */,
+				07F675022173B21600F36C97 /* Storyboards */,
+				07F675002173A98800F36C97 /* View Controllers */,
 				07DFE531216C36E9002D62BC /* Assets.xcassets */,
-				07DFE533216C36E9002D62BC /* LaunchScreen.storyboard */,
 				07DFE536216C36E9002D62BC /* Info.plist */,
-				07DFE54A216C38C5002D62BC /* Word.swift */,
-				07DFE550216C3AAC002D62BC /* CorpusLibraryManager.swift */,
-				07DFE552216C3EB8002D62BC /* jokes.txt */,
-				07DFE54C216C38F9002D62BC /* Chain.swift */,
 				07DFE54E216C39ED002D62BC /* Extensions.swift */,
 			);
 			path = "Dad Joke Generator";
@@ -115,6 +118,44 @@
 				07DFE541216C36EA002D62BC /* Info.plist */,
 			);
 			path = "Dad Joke GeneratorTests";
+			sourceTree = "<group>";
+		};
+		07F674FF2173A95C00F36C97 /* Markov Chain Generator */ = {
+			isa = PBXGroup;
+			children = (
+				07DFE54C216C38F9002D62BC /* Chain.swift */,
+				07F674F72171AA1700F36C97 /* StringSplitter.swift */,
+				07DFE54A216C38C5002D62BC /* Word.swift */,
+			);
+			path = "Markov Chain Generator";
+			sourceTree = "<group>";
+		};
+		07F675002173A98800F36C97 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07F674FB2173A01B00F36C97 /* CachedJokesTableViewController.swift */,
+				07F674FD2173A7B300F36C97 /* JokeTableViewCell.swift */,
+				07DFE52C216C36E8002D62BC /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		07F675012173B20000F36C97 /* File Managers */ = {
+			isa = PBXGroup;
+			children = (
+				07DFE550216C3AAC002D62BC /* CorpusLibraryManager.swift */,
+				07F674F92172701600F36C97 /* JokesLibraryManager.swift */,
+			);
+			path = "File Managers";
+			sourceTree = "<group>";
+		};
+		07F675022173B21600F36C97 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				07DFE52E216C36E8002D62BC /* Main.storyboard */,
+				07DFE533216C36E9002D62BC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +242,6 @@
 				07DFE535216C36E9002D62BC /* LaunchScreen.storyboard in Resources */,
 				07DFE532216C36E9002D62BC /* Assets.xcassets in Resources */,
 				07DFE530216C36E8002D62BC /* Main.storyboard in Resources */,
-				07DFE553216C3EB8002D62BC /* jokes.txt in Resources */,
 				07D25F4E216D87E7009A213C /* .gitignore in Resources */,
 				07DFE555216D2E45002D62BC /* LICENSE in Resources */,
 			);
@@ -221,11 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F674FA2172701600F36C97 /* JokesLibraryManager.swift in Sources */,
 				07DFE54F216C39ED002D62BC /* Extensions.swift in Sources */,
+				07F674FC2173A01B00F36C97 /* CachedJokesTableViewController.swift in Sources */,
 				07DFE52D216C36E8002D62BC /* ViewController.swift in Sources */,
 				07DFE551216C3AAC002D62BC /* CorpusLibraryManager.swift in Sources */,
 				07DFE54D216C38F9002D62BC /* Chain.swift in Sources */,
+				07F674FE2173A7B300F36C97 /* JokeTableViewCell.swift in Sources */,
 				07DFE52B216C36E8002D62BC /* AppDelegate.swift in Sources */,
+				07F674F82171AA1700F36C97 /* StringSplitter.swift in Sources */,
 				07DFE54B216C38C5002D62BC /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
