@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0761613221742CEE0098EC24 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		07D25F4D216D87E7009A213C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		07DFE527216C36E8002D62BC /* Dad Joke Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dad Joke Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DFE52A216C36E8002D62BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				07DFE554216D2E45002D62BC /* LICENSE */,
+				0761613221742CEE0098EC24 /* README.md */,
 				07D25F4D216D87E7009A213C /* .gitignore */,
 				07DFE529216C36E8002D62BC /* Dad Joke Generator */,
 				07DFE53E216C36EA002D62BC /* Dad Joke GeneratorTests */,
