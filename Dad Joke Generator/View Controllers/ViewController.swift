@@ -17,21 +17,26 @@ class ViewController: UIViewController {
     let chain = Chain()
     let stringSplitter = StringSplitter()
     
+    // Set up our local cache manager object for the jokes we generate
     let jokesLibraryManager = JokesLibraryManager()
     
+    
+    // Action attached to our Generate button
     @IBAction func generateDadJoke(_ sender: Any) {
         
         let joke = self.chain.generate().joined(separator: " ")
-        jokesLibraryManager.insertJokeIntoFile(newJoke: joke)
+        
         
         let alert = UIAlertController(title: "A New Dad Joke", message: joke, preferredStyle: UIAlertController.Style.alert)
         
         // Add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Save Joke", style: UIAlertAction.Style.default, handler: { action in self.jokesLibraryManager.insertJokeIntoFile(newJoke: joke) }))
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
         
         // Show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

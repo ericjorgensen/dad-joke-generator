@@ -20,41 +20,70 @@ class CorpusLibraryManager {
     var corpusFilePath: URL?
     
     init() {
+        // Helpful for local debugging
+        print(documentsDirectory?.absoluteString ?? "No directory information available")
         
         if let libraryFileExpectedPath = documentsDirectory?.appendingPathComponent(filename).appendingPathExtension("txt") {
             corpusFilePath = libraryFileExpectedPath
-            
-            // Create a text file in the documents directory for the app if it doesn't exist
-            if !doesCorpusFileExist() {
-                requestDadJokesForCorpus()
-            }
         }
-        
-        // Helpful for local debugging
-        print(documentsDirectory?.absoluteString ?? "No directory information available")
     }
     
     func doesCorpusFileExist() -> Bool {
-        if FileManager.default.fileExists(atPath: (corpusFilePath?.absoluteString)!) {
+        
+        do {
+            try corpusFilePath?.checkResourceIsReachable()
+            
             return true
+            
+        } catch let error as NSError {
+            print(error)
         }
         
         return false
     }
     
-    func createCorpusFile(contents: String) {
-
-        //writing
-        do {
-            try contents.write(to: corpusFilePath!, atomically: false, encoding: .utf8)
+    func maybeCreateCorpusFile() {
+        
+        if !doesCorpusFileExist() {
+            
+            // Create a text file in the documents directory for the app if it doesn't exist
+            if !doesCorpusFileExist() {
+                
+                // Let's grab 4 pages of dad jokes from the API
+                for var page in 1 ... 10 {
+                    requestDadJokesForCorpus(index: page)
+                }
+            }
         }
-        catch {/* error handling here */}
+    }
+    
+    func writeToCorpusFile(contents: String) {
+        
+        let dataToWrite: Data? = contents.data(using: .utf8)
+        
+        
+        // Let's append to the file if it already exists
+        do {
+            let fileHandle = try FileHandle(forWritingTo: corpusFilePath!)
+            fileHandle.seekToEndOfFile()
+            fileHandle.write(dataToWrite!)
+            fileHandle.closeFile()
+        }
+        catch {
+            // File doesn't exist yet, so we have to get it started
+            do {
+                try contents.write(to: corpusFilePath!, atomically: false, encoding: .utf8)
+            }
+            catch {/* error handling here */}
+            
+        }
+    
+        
+        
     }
     
     func readCorpusFile() -> String {
         
-        if corpusFilePath != nil {
-            
             do {
                 let fileString = try String(contentsOf: corpusFilePath!)
                 
@@ -62,16 +91,15 @@ class CorpusLibraryManager {
                 
             } catch {
                 print("Failed reading from URL: \(String(describing: corpusFilePath)), Error: " + error.localizedDescription)
+                
+                return readCorpusFile()
             }
-        }
-        
-        return "Couldn't load file"
         
     }
 
-    func requestDadJokesForCorpus() {
+    func requestDadJokesForCorpus(index: Int) {
         
-        let urlPath = "https://icanhazdadjoke.com/search?limit=30&page=1"
+        let urlPath = "https://icanhazdadjoke.com/search?limit=30&page=" + String(index)
         let url = URL(string: urlPath)
         let session = URLSession.shared
         let request = NSMutableURLRequest(url: url!)
@@ -91,7 +119,7 @@ class CorpusLibraryManager {
     }
     
     func handleDadJokesFromRequest(requestData: String) {
-        createCorpusFile(contents: requestData)
+        writeToCorpusFile(contents: requestData)
     }
     
 }

@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // We need an instance of this object to create our corpus file when the app first launches
+        let corpusFileManager = CorpusLibraryManager()
+        corpusFileManager.maybeCreateCorpusFile()
+        
         return true
     }
 

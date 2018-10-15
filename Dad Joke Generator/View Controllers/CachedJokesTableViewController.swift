@@ -49,6 +49,8 @@ public class CachedJokesTableViewController: UITableViewController {
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jokeCell", for: indexPath) as! JokeTableViewCell
+        cell.jokeText.numberOfLines = 0
+        cell.jokeText.lineBreakMode = .byWordWrapping
         cell.jokeText.text = (jokes[indexPath.row]) //as! String)
         
         return cell
